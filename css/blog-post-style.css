@@ -1,0 +1,128 @@
+
+body {
+    background: tomato;
+    width: auto;
+    margin-left: 0 auto;
+    margin-right: 0 auto;
+    display: block;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100px 400px 200px 500px 500px 100px 100px 1fr;
+    grid-template-areas:
+        "hd"
+        "sd"
+        "im"
+        "ac"
+        "dr"
+        "ft"
+        "tw";
+    border: 5px solid wheat;
+  }
+
+.box {
+    font-family: Arial, Helvetica, sans-serif;
+    color: wheat;
+    border: 5px solid pink;
+}
+
+.header {
+    color: wheat;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    font-size: 50px;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    grid-area: hd;
+}
+
+.content {
+    grid-area: sd;
+}
+
+h1 {
+    font-size: 20px;
+}
+blockquote {
+    font-size: 15px;
+}
+
+h3 {
+    font-size: 12px;
+}
+
+.image {
+    display: flex;
+    grid-area: im;
+    image-orientation: initial;
+    justify-content: center;
+    justify-items: center;
+}
+
+.acrylic {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    color: wheat;
+    grid-area: ac;
+}
+
+.painting-gallery {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.display {
+    width: fit-content;
+    height: fit-content;
+    border: 2px solid black;
+    margin: 10px;
+}
+
+.drawing {
+    font-family: Arial, Helvetica, sans-serif;
+    color: wheat;
+    grid-area: dr;
+}
+
+#learn {
+    background: wheat;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    color: tomato;
+    justify-content: center;
+    justify-items: center;
+}
+
+.footer {
+    font-size: 20px;
+    grid-area: ft;
+    justify-content: center;
+    justify-items: center;
+}
+
+.footer-two {
+    font-size: 20px;
+    grid-area: tw;
+}
+
+q {
+    font-family: cursive;
+}
+
+
+
+@media (min-width: 600px) and (max-width: 900px) {
+    .container {
+        display: grid;
+        grid-template-columns: 200px 201px;
+        grid-template-rows: 120px 150px 300px 100px;
+        grid-template-areas:
+            "hd hd hd hd hd hd hd hd"
+            "sd sd sd sd im im im im"
+            "ac ac ac ac dr dr dr dr"
+            "ft ft ft ft ft ft ft ft"
+            "tw tw tw tw tw tw tw tw";
+    }
+}
